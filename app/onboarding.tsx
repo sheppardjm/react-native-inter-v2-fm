@@ -1,7 +1,7 @@
-import { Button, View, StyleSheet } from "react-native";
+import { View, StyleSheet, Button } from "react-native";
 import { theme } from "@/theme";
-import { useRouter } from "expo-router";
 import { useUserStore } from "@/store/userStore";
+import { useRouter } from "expo-router";
 
 export default function OnboardingScreen() {
   const router = useRouter();
@@ -9,7 +9,7 @@ export default function OnboardingScreen() {
 
   const handlePress = () => {
     toggleHasOnboarded();
-    router.navigate("/");
+    router.replace("/");
   };
 
   return (
