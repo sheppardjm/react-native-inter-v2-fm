@@ -1,5 +1,5 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { persist, createJSONStorage } from "zustand/middleware";
 
 type UserState = {
@@ -12,7 +12,7 @@ export const useUserStore = create(
     (set) => ({
       hasFinishedOnboarding: false,
       toggleHasOnboarded: () => {
-        return set((state) => {
+        set((state) => {
           return {
             ...state,
             hasFinishedOnboarding: !state.hasFinishedOnboarding,

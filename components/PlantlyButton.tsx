@@ -14,9 +14,10 @@ export function PlantlyButton({ title, onPress }: Props) {
     }
     onPress();
   };
+
   return (
     <Pressable
-      onPress={onPress}
+      onPress={handlePressed}
       style={(state) => {
         if (state.pressed) {
           return [styles.button, styles.buttonPressed];
@@ -24,9 +25,7 @@ export function PlantlyButton({ title, onPress }: Props) {
         return styles.button;
       }}
     >
-      <Text onPress={handlePressed} style={styles.text}>
-        {title}
-      </Text>
+      <Text style={styles.text}>{title}</Text>
     </Pressable>
   );
 }
