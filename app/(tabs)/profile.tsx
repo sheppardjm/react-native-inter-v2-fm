@@ -7,7 +7,7 @@ export default function ProfileScreen() {
   const toggleHasOnboarded = useUserStore((state) => state.toggleHasOnboarded);
   return (
     <View style={styles.container}>
-      <PlantlyButton title="Let me in!" onPress={toggleHasOnboarded} />
+      <PlantlyButton title="Back to onboarding" onPress={toggleHasOnboarded} />
     </View>
   );
 }
