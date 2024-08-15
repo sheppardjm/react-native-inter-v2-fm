@@ -1,3 +1,4 @@
+import { theme } from "@/theme";
 import { Stack } from "expo-router";
 
 export default function RootLayout() {
@@ -21,6 +22,14 @@ export default function RootLayout() {
           title: "New plant",
           presentation: "modal",
           animation: "slide_from_bottom",
+        }}
+      />
+      <Stack.Screen
+        name="plants/[plantId]"
+        options={{
+          title: "",
+          headerBackTitleVisible: false,
+          headerTintColor: theme.colorBlack,
         }}
       />
     </Stack>
